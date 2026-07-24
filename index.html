@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Visitors.now Design</title>
+
+        <link rel="preconnect" href="https://rsms.me">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <nav>
+            <img src="logo.png">
+            <a href="#" class="nav-feature-drop-down">Features<img src="caret-down.svg"></a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+            <a href="#">Docs</a>
+            <div class="nav-cta-btn-group">
+                <a href="#" class="nav-login-btn">Login</a>
+                <button href="#" class="nav-register-btn">Register</button>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <a href="#" class="hero-pill">
+                <p class="hero-pill-tag">NEW</p>
+                <p class="hero-pill-text">We hit $1k MRR</p>
+                <img src="caret-right.svg">
+            </a>
+            
+            <h1 class="hero-title">Revenue-first web analytics</h1>
+            
+            <p class="hero-subtitle">See every visitor in realtime and witness the moment they become a customer.</p>
+            
+            <div class="hero-buttons">
+                <button class="main-hero-cta-button">Start 14-day free trial</button>
+                <button class="secondary-hero-cta-button">See demo</button>
+            </div>
+            
+        </div>
+        
+        <div class="hero-marquee">
+            <a href="#"><img src="godly.png"></a>
+            <a href="#"><img src="endless.png"></a>
+            <a href="#"><img src="temple.png"></a>
+            <a href="#"><img src="inbound.png"></a>
+            <a href="#"><img src="fleet.png"></a>
+            <a href="#"><img src="buildkite.png"></a>
+        </div>
+        
+        <div class="hero-image">
+            <img
+                class="hero-img"
+                src="watercolor.jpg"
+                alt=""
+            >
+        
+            <div class="hero-image-tab">
+                <div class="hero-image-nav">
+                    <a class="active" href="#">Dashboard</a>
+                    <a href="#">Profiles</a>
+                    <a href="#">Funnels</a>
+                    <a href="#">Performance</a>
+                    <a href="#">Realtime</a>
+                </div>
+            </div>
+        
+            <div class="hero-image-preview">
+                <img
+                    src="hero-dashboard.png"
+                    alt="Analytics dashboard preview"
+                >
+            </div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <script>
+            const nav = document.querySelector("nav");
+            const root = document.documentElement;
+        
+            function updateNavHeight() {
+                const navHeight = nav.getBoundingClientRect().height;
+        
+                root.style.setProperty(
+                    "--nav-height",
+                    `${navHeight}px`
+                );
+            }
+        
+            updateNavHeight();
+        
+            const navObserver = new ResizeObserver(updateNavHeight);
+            navObserver.observe(nav);
+        </script>
+    </body>
+</html>
